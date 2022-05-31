@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/formularioFragment">
+
+    <fragment
+        android:id="@+id/formularioFragment"
+        android:name="com.example.retofirebase.FormularioFragment"
+        android:label="fragment_formulario"
+        tools:layout="@layout/fragment_formulario" >
+        <action
+            android:id="@+id/action_formularioFragment_to_vistaFragment"
+            app:destination="@id/vistaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vistaFragment"
+        android:name="com.example.retofirebase.VistaFragment"
+        android:label="fragment_vista"
+        tools:layout="@layout/fragment_vista" >
+        <action
+            android:id="@+id/action_vistaFragment_to_formularioFragment"
+            app:destination="@id/formularioFragment" />
+    </fragment>
+</navigation>
